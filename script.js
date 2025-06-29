@@ -82,3 +82,31 @@ function updateProgress() {
   const progressPercent = ((currentIndex + 1) / phrases.length) * 100;
   progressBarFill.style.width = progressPercent + '%';
 }
+function toggleFavoritesSidebar() {
+  const sidebar = document.getElementById('favorites-sidebar');
+  if (sidebar.classList.contains('visible')) {
+    sidebar.classList.remove('visible');
+  } else {
+    renderFavorites();
+    sidebar.classList.add('visible');
+  }
+}
+
+function renderFavorites() {
+  const list = document.getElementById('favorites-list');
+  list.innerHTML = '';
+  if (favorites.length === 0) {
+    list.innerHTML = '<li>لا توجد جمل مفضلة بعد.</li>';
+    return;
+  }
+  favorites.forEach((phrase, index) => {
+    const li = document.createElement('li');
+    li.textContent = phrase.en + ' - ' + phrase.ar;
+    li.style.cursor = 'pointer';
+    li.onclick = () => {
+      showPhrase(phrases.findIndex(p => p.en === phrase.en));
+      toggleFavoritesSidebar();
+    };
+    list.appendChild(li);
+  });
+}
