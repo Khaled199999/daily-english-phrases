@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #2a8fbd;
+}
+
+.phrase-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+#en-text {
+  font-size: 2rem;
+  color: #1a73e8;
+}
+
+#ar-text {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #2a8fbd;
+  color: #fff;
+}
