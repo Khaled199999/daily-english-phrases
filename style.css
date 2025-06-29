@@ -56,3 +56,28 @@ h1 {
 #fav-btn.favorited {
   color: gold;
 }
+
+.progress-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  color: #2a8fbd;
+}
+
+.progress-bar-background {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 15px;
+  margin-top: 5px;
+}
+
+#progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #2a8fbd;
+  border-radius: 20px 0 0 20px;
+  transition: width 0.3s ease;
+}
