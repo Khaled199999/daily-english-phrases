@@ -9,6 +9,13 @@ function showPhrase(index) {
   document.getElementById('ar-text').innerText = phrases[index].ar;
   updateFavoriteIcon();
 }
+function showPhrase(index) {
+  currentIndex = index;
+  document.getElementById('en-text').innerText = phrases[index].en;
+  document.getElementById('ar-text').innerText = phrases[index].ar;
+  updateFavoriteIcon();
+  updateProgress();  // ← هذه الإضافة
+}
 
 function updateFavoriteIcon() {
   const favBtn = document.getElementById('fav-btn');
