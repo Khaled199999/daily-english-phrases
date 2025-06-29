@@ -103,3 +103,13 @@ function repeatPhrase() {
 
 // عرض أول جملة عند التحميل
 showPhrase(currentIndex);
+
+function updateProgress() {
+  const progressText = document.getElementById('progress-text');
+  const progressBarFill = document.getElementById('progress-bar-fill');
+  
+  progressText.textContent = `${currentIndex + 1} / ${phrases.length}`;
+  
+  const progressPercent = ((currentIndex + 1) / phrases.length) * 100;
+  progressBarFill.style.width = progressPercent + '%';
+}
