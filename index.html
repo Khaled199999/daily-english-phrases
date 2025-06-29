@@ -26,7 +26,13 @@
   <div class="progress-bar-background">
     <div id="progress-bar-fill"></div>
   </div>
-</div> 
+</div> <button id="show-favorites-btn" onclick="toggleFavoritesSidebar()">📋 المفضلة</button>
+
+<div id="favorites-sidebar" class="sidebar hidden">
+  <h3>المفضلة</h3>
+  <ul id="favorites-list"></ul>
+  <button onclick="toggleFavoritesSidebar()">إغلاق</button>
+</div>
 
   <script src="phrases.js"></script>
   <script src="script.js"></script>
