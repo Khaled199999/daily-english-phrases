@@ -14,24 +14,23 @@
       <div class="phrase-card">
   <h2 id="en-text">Hello!</h2>
   <p id="ar-text">مرحباً!</p>
-  <button id="fav-btn" onclick="toggleFavorite()" title="أضف/احذف من المفضلة">⭐️</button>
-  <div class="controls">
-    <button onclick="prevPhrase()">⬅️ السابق</button>
-    <button onclick="speakCurrent()">🔊 تشغيل</button>
-    <button onclick="repeatPhrase()">🔁 تكرار</button>
-    <button onclick="nextPhrase()">➡️ التالي</button>
-  </div>
-        <div class="progress-container">
-  <span id="progress-text">1 / 150</span>
-  <div class="progress-bar-background">
-    <div id="progress-bar-fill"></div>
-  </div>
-</div> <button id="show-favorites-btn" onclick="toggleFavoritesSidebar()">📋 المفضلة</button>
+        
+ <div class="controls">
+  <button onclick="prevPhrase()">⬅️ السابق</button>
+  <button onclick="speakCurrent()">🔊 تشغيل</button>
+  <button onclick="repeatPhrase()">🔁 تكرار</button>
+  <button onclick="nextPhrase()">➡️ التالي</button>
+  <button id="fav-btn" onclick="toggleFavorite()" title="إضافة إلى المفضلة">⭐️</button>
+  <button onclick="toggleFavoritesSidebar()">📋 المفضلة</button>
+</div>
 
-<div id="favorites-sidebar" class="sidebar hidden">
-  <h3>المفضلة</h3>
+<!-- النافذة الجانبية -->
+<div id="favorites-sidebar" class="sidebar">
+  <h3>📋 الجمل المفضلة</h3>
   <ul id="favorites-list"></ul>
   <button onclick="toggleFavoritesSidebar()">إغلاق</button>
+</div>
+
 </div>
 
   <script src="phrases.js"></script>
